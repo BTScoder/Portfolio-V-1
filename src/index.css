@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=M+PLUS+U:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-general: "M PLUS U", sans-serif;
+}
+
+.grid-background {
+
+    background-image:
+        repeating-linear-gradient(to right,
+            #e0e0e0,
+            #e0e0e0 1px,
+            transparent 1px,
+            transparent 30px)
+        /* repeating-linear-gradient(to bottom,
+            #e0e0e0,
+            #e0e0e0 1px,
+            transparent 1px,
+            transparent 70px); */
+}
