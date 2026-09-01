@@ -5,7 +5,6 @@ interface FolderProps {
     classes: string,
     tab: string,
     isOpen: boolean,
-    // selectedId: number | null,
     setIsOpen: (isOpen: boolean) => void,
     setActiveTab: (tab: string) => void,
 }
@@ -20,7 +19,7 @@ function FolderComp({ title, classes, tab, isOpen, setIsOpen, setActiveTab }: Fo
             }}
         >
             <Folder className="folder-icon h-15 w-15" strokeWidth={2.2} fill="black" />
-            <p className="folder-label">{title}</p>
+            <p className="folder-label text-xs">{title}</p>
         </div>
     )
 }

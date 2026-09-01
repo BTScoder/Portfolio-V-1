@@ -42,7 +42,7 @@ function App() {
                     setSelectedId(id)
                   }}
                 />
-                <p className="folder-label">{title}</p>
+                <p className="folder-label text-sm">{title}</p>
               </motion.div>
             ))}
           </div>

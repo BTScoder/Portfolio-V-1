@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=M+PLUS+U:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=M+PLUS+U:wght@100..900&family=Pacifico&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
     --font-general: "M PLUS U", sans-serif;
+    --font-heading: "Pacifico", cursive;
+    --font-dotted: "Doto", sans-serif;
 }
 
 :root {
@@ -26,7 +28,39 @@ body {
             transparent 30px);
 }
 
-.folder-item {
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: border-box;
+    color: #000;
+    background:
+        radial-gradient(circle 3px, currentColor 95%, #0000),
+        linear-gradient(currentColor 50%, #0000 0) 50%/3px 80% no-repeat,
+        linear-gradient(90deg, currentColor 50%, #0000 0) 50%/60% 3px no-repeat;
+    position: relative;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    inset: 100% 10% auto;
+    background:
+        radial-gradient(circle closest-side at 50% calc(100% - 10px), currentColor 94%, #0000),
+        linear-gradient(currentColor 0 0) top/3px 80% no-repeat;
+    transform-origin: top;
+    animation: l2 2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes l2 {
+    100% {
+        transform: rotate(0.4deg)
+    }
+}
+
+/* .folder-item {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -48,7 +82,7 @@ body {
     line-height: 1.1;
     letter-spacing: -0.04em;
     white-space: nowrap;
-}
+} */
 
 @media (max-width: 1024px) {
     .folder-item {
