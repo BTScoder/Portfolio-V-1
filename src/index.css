@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=M+PLUS+U:wght@100..900&family=Pacifico&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=M+PLUS+U:wght@100..900&family=Pacifico&family=Patrick+Hand+SC&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
     --font-general: "M PLUS U", sans-serif;
     --font-heading: "Pacifico", cursive;
     --font-dotted: "Doto", sans-serif;
+    --font-patrick: "Patrick Hand SC", cursive;
 }
 
 :root {
@@ -54,35 +55,34 @@ body {
     animation: l2 2s infinite cubic-bezier(0.5, 200, 0.5, -200);
 }
 
+.stack-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.stack-heading::before,
+.stack-heading::after {
+    content: "";
+    width: 28px;
+    height: 3px;
+    background: #7c5ce0;
+    border-radius: 10px;
+    transform: rotate(-25deg);
+}
+
+.stack-heading::after {
+    transform: rotate(25deg);
+}
+
 @keyframes l2 {
     100% {
         transform: rotate(0.4deg)
     }
 }
 
-/* .folder-item {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90px;
-    color: #1a1a1a;
-    text-align: center;
-    z-index: 20;
-}
 
-.folder-icon {
-    color: #121212;
-    transform: scale(1.05);
-}
-
-.folder-label {
-    margin-top: 0.4rem;
-    font-size: 0.82rem;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-    white-space: nowrap;
-} */
 
 @media (max-width: 1024px) {
     .folder-item {
